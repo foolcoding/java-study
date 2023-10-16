@@ -12,6 +12,7 @@ public class ex01 {
 		name = "해피";
 		age = 24;
 		System.out.println(name + "의 나이는" + age +"살 입니다");
+		
 	}
 
 }

@@ -1,6 +1,6 @@
 package variable;
 
-public class ex01 {
+public class Ex01 {
 	public static void main(String[] a) {
 		System.out.println("2");
 		System.out.println("이름은");

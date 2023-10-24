@@ -17,7 +17,7 @@ public class Ex08 {
 		
 		// 시작부터 마지막값까지 일정한 크기로 변하면서 연속성이 필요하다
 		for(int i = 1; i < 10; i++) {
-			System.out.printf("%d * %d = %d\n", 3, 1, 3 * i);
+			System.out.printf("%d * %d = %d\n", 3, i, 3 * i);
 		} System.out.println();
 		
 		// 2단부터 9단까지 구구단 출력하기

@@ -21,8 +21,8 @@ public class Ex06 {
 		System.out.println();
 		
 		System.out.println("arr : " + Arrays.toString(arr));
-		// 배열의 i번째 글자 중에서, 짝수번째 글자가 알파벳 소문자이면 대문자로 바꾸기
 		
+		// 배열의 i번째 글자 중에서, 짝수번째 글자가 알파벳 소문자이면 대문자로 바꾸기
 		for(int i = 0; i < arr.length; i++) {
 			char ch = arr[i];
 			if(i % 2 == 0 && 'a' <= ch && ch <= 'z') {
@@ -49,7 +49,6 @@ public class Ex06 {
 		// 2) 주어진 문자열에서 숫자는 그대로 출력하고 숫자가아닌 값은 출력하지 않고 줄을 띄우기
 		String s3 = "9445-0230-1176-8878";
 		char[] arr3 = s3.toCharArray();
-		char enter = '\n';
 
 		for(int i = 0; i < arr3.length; i++) {
 			char ch = arr3[i];

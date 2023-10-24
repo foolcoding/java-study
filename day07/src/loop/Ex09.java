@@ -5,13 +5,13 @@ public class Ex09 {
 		
 		// 1) 1부터 5까지 한줄에 출력하기
 		for(int i = 1; i <= 5; i++) {
-			System.out.println(i + " ");
+			System.out.print(i + " ");
 		}	System.out.println("\n");
 		
 		// 2) 1부터 5까지 한줄 출력코드를 다시 5번 출력하기
 		for(int i = 0; i <= 5; i++) {
 			for(int j = 1; j <= 5; j++) {
-				System.out.println(j + " ");
+				System.out.print(j + " ");
 			}
 		}	System.out.println("\n");
 		
@@ -21,9 +21,9 @@ public class Ex09 {
 			for(int j = 0; j < 5; j++) {
 				System.out.printf("%2d ", num);
 				num++;
-			}
-			System.out.println();
+			} System.out.println();
 		}
+		
 		System.out.println();
 		
 		// 4) (i, j)번째 칸에 원하는 글자를 출력하기
@@ -56,12 +56,12 @@ public class Ex09 {
 		
 		// 6) 바둑식배열
 		for (int i = 0; i < 5; i++) {
-			if(i == 0 || i == 2 || i == 4) {
+			if(i % 2 == 0) {
 				System.out.print("# ");
 			}
 			for(int j = 0; j < 5; j++) {
-				if(j == 1 || j == 3 ) {
-//				if(n1 % == 1) {
+				if(j % 2 == 1) {
+//				if(n1 % 2 == 1) {
 //				if((i + j) % 2 == 0) {
 					System.out.print("# ");
 				}

@@ -40,7 +40,7 @@ public class Ex02 {
 			cnt++;						// 횟수에 대한 증감			(4)
 		}
 		System.out.println();
-		for(int i =0; i < 5; i++) {		// for(1; 2; 4){
+		for(int i = 0; i < 5; i++) {	// for(1; 2; 4){
 			System.out.println(i);		// 		3
 		}								// }
 		System.out.println();

@@ -56,7 +56,7 @@ public class Ex01 {
 /*
 class Test {
 	int n1 = 10;	// 클래스 영역에서 선언되고
-	int n2 = 20l	// 클래스를 이용한 객체에서 참조가 가능한 변수 (필드)
+	int n2 = 20;	// 클래스를 이용한 객체에서 참조가 가능한 변수 (필드)
 			Test ob = new Test();
 	System.out.println(ob.n1);	// 클래스의 멤버필드는 파란색
 }

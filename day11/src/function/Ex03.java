@@ -37,7 +37,7 @@ public class Ex03 {
 			switch(menu) {
 			case 1:
 				if(money < fee) {
-					System.out.println("머니가 부족합니다");
+					System.out.println("돈 벌어 오세요ㅕ");
 					break LOOP;
 				}
 				for(int i = 0; i < 3; i++) {

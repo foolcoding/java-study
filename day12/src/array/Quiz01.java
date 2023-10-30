@@ -32,13 +32,9 @@ public class Quiz01 {
 		
 		// [] : 배열 생성시에는 길이를 지정 (리터럴 및 변수 사용가능)
 		// 		생성된 배열에 대해 사용하면 길이가 아니라 인덱스를 지정한다	
-		// 3) arr에서 짝수만 골라서 새로운 배열 arr2에 저장하고 출력
-
-		System.out.print("짝수만 : ");
-		
+		// 3) arr에서 짝수만 골라서 새로운 배열 arr2에 저장하고 출력	
 		// 길이가 서로 달라서 원본배열의 인덱스와 신규배열의 인덱스를 따로 관리해야 한다
 		int[] arr2 = new int[evenCount];
-		
 		int j= 0;
 		for(int i =0; i < arr.length; i++) {
 			if(arr[i] % 2 == 0) {
@@ -46,6 +42,7 @@ public class Quiz01 {
 				j++;
 			}
 		}
+		System.out.print("짝수만 : ");
 		System.out.println(Arrays.toString(arr2));
 		
 		// 4) arr의 내용을 거꾸로 담은 배열 arr3를 만들어서 출력
@@ -55,7 +52,6 @@ public class Quiz01 {
 			int k = arr.length -1 -i;
 			arr3[k] += arr[i];
 		}
-
 		System.out.println(Arrays.toString(arr3));
 		
 		// 5) arr를 내름차순 정렬한 후 다시 출력하세요

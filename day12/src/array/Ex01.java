@@ -9,7 +9,7 @@ public class Ex01 {
 		// 자료형 : String
 		// 변수 : str
 		// 리터럴 : "Hello"
-		string str = "Hello";
+		String str = "Hello";
 		System.out.println(str);
 		
 		// 대부분의 프로그램은 소수가 아닌, 다수의 데이터를 다루게 된다
@@ -19,7 +19,7 @@ public class Ex01 {
 		int n1 = 3, n2 = 5, n3 = 8;
 //		for(int i = 1; i <= 3; i++) {
 //			ni = ni * 2;
-//			System.out.println(bi);
+//			System.out.println(ni);
 //		}
 		
 		// [같은 자료형]의 여러 변수를 연속된 메모리 공간에 배치하기 위해서 사용하는 문법
@@ -33,7 +33,7 @@ public class Ex01 {
 			// 배열 내부의 각 맴버는 각각 서로 다른 변수로 취급하면 된다
 			int tmp = arr[i] * 2;	// 우변에서 연산도 가능하고
 			arr[i] = tmp;			// 좌변에 위치시켜서 대입도 가능하다
-			System.out.println(arr[i]);		// 출력도 가능하다
+			System.out.print(arr[i]);		// 출력도 가능하다
 		}
 		
 	}

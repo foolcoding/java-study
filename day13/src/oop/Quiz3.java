@@ -22,15 +22,15 @@ class TV {
 	// 매개변수를 받지 않아도 초기값을 지정할 수 있습니다	//
 	// 에를 들면 채널의 초기값이 0인것은 이상합니다, 다른 값이 초기값이 되도록 하세요	//
 	
-	TV(int volume, int channel, boolean power){
+	TV(int volume, int channel,  boolean power){
 		this.volume = volume;
 		this.channel = channel;
 		this.power = power;
 	}
 	
 	TV() {
-		this.volume = 5;
 		this.channel = 1; 
+		this.volume = 5;
 		this.power = true;
 	}
 	
@@ -47,7 +47,7 @@ class TV {
 	void volumeUp() {
 		volume++;
 		if(volume == 11) {
-			System.err.println("더이상 늘릴수 없습니다");
+			System.out.println("더이상 늘릴수 없습니다");
 			volume--;
 		}
 }
@@ -55,24 +55,22 @@ class TV {
 	void volumeDown() {
 		volume--;
 		if(volume == 0) {
-			System.err.println("더이상 줄일수 없습니다");
+			System.out.println("더이상 줄일수 없습니다");
 			volume++;
 		}
 }
-
+	
 	void channelUp() {
 			channel++;
 		if(channel == 100) {
-			System.err.println("더이상 올릴수 없습니다");
-			channel--;
+			channel = 1;
 		}
 	}
 	
 	void channelDown() {
 			channel--;
 			if(channel == 0) {
-				System.err.println("더이상 줄일수 없습니다");
-				channel++;
+				channel = 99;
 			}
 		}
 	
@@ -98,11 +96,13 @@ public class Quiz3 {
 		int menu;
 		TV tv = new TV();
 		
-		System.out.println("볼륨 up : 1 down : 3");
-		System.out.println("채널 up : 5 down : 7");
-		System.out.println("음소거 : 2 현재상태 : 9 전원 : 10");	
+		
 		LOOP : while(true) {
 			tv.show();
+			System.out.println("볼륨      채널");
+			System.out.println("up : 1   up : 5");
+			System.out.println("down : 3 down : 7");
+			System.out.println("음소거 : 2 전원 : 10");	
 			System.out.print("선택 >>> ");
 			menu = sc.nextInt();
 			
@@ -111,13 +111,13 @@ public class Quiz3 {
 			// 입력된 메뉴에 따라서 tv객체의 메서드를 호출하는 형태로 전환
 			case 1: tv.volumeUp();
 					break;
+			case 2: tv.mute();
+					break;
 			case 3: tv.volumeDown();
 					break;
 			case 5: tv.channelUp();
 					break;
 			case 7: tv.channelDown();
-					break;
-			case 9: tv.mute();
 					break;
 			case 10: tv.turn();
 					break;
@@ -129,7 +129,7 @@ public class Quiz3 {
 				tv.turn();
 			}
 			else {
-				System.err.println("tv전원을 켜주세요");
+				System.out.println("tv전원을 켜주세요");
 			}
 		}
 		sc.close();

@@ -22,16 +22,10 @@ class TV {
 	// 매개변수를 받지 않아도 초기값을 지정할 수 있습니다	//
 	// 에를 들면 채널의 초기값이 0인것은 이상합니다, 다른 값이 초기값이 되도록 하세요	//
 	
-	TV(int volume, int channel,  boolean power){
-		this.volume = volume;
-		this.channel = channel;
-		this.power = power;
-	}
-	
 	TV() {
 		this.channel = 1; 
-		this.volume = 5;
-		this.power = true;
+		this.volume = 3;
+		this.power = false;
 	}
 	
 	void turn() {
@@ -46,7 +40,7 @@ class TV {
 	
 	void volumeUp() {
 		volume++;
-		if(volume == 11) {
+		if(volume >= 11) {
 			System.out.println("더이상 늘릴수 없습니다");
 			volume--;
 		}
@@ -54,7 +48,7 @@ class TV {
 
 	void volumeDown() {
 		volume--;
-		if(volume == 0) {
+		if(volume <= 0) {
 			System.out.println("더이상 줄일수 없습니다");
 			volume++;
 		}
@@ -62,21 +56,23 @@ class TV {
 	
 	void channelUp() {
 			channel++;
-		if(channel == 100) {
+		if(channel >= 100) {
 			channel = 1;
 		}
 	}
 	
 	void channelDown() {
 			channel--;
-			if(channel == 0) {
+			if(channel <= 0) {
 				channel = 99;
 			}
 		}
 	
 	void show(){
-		System.out.println("---------------------------------------");
-		System.out.printf("채널 : %d\n볼륨 : %d\n전원 : %s\n", channel, volume, power ? "on" : "off");
+		System.out.println("┌──────────────────────┐");
+		System.out.printf("│\tch : %d\t       │\n│\tvol : %d        │\n│\tpower : %s    │\n", channel, volume, power ? "on " : "off");
+		System.out.println("└──────────┬───────────┘");
+		System.out.println("    ───────┴────────");
 	}
 	
 	void mute() {
@@ -96,13 +92,14 @@ public class Quiz3 {
 		int menu;
 		TV tv = new TV();
 		
-		
 		LOOP : while(true) {
 			tv.show();
-			System.out.println("볼륨      채널");
-			System.out.println("up : 1   up : 5");
-			System.out.println("down : 3 down : 7");
-			System.out.println("음소거 : 2 전원 : 10");	
+			System.out.println("┌─────────────────────┐");
+			System.out.println("│   vol      ch       │");
+			System.out.println("│ up   : 1 up   : 5   │");
+			System.out.println("│ down : 3 down : 7   │");
+			System.out.println("│ mute : 2 power : 10 │");
+			System.out.println("└─────────────────────┘");
 			System.out.print("선택 >>> ");
 			menu = sc.nextInt();
 			

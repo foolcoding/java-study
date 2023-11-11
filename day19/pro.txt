@@ -1,0 +1,8 @@
+#String \uD074\uB798\uC2A4 \uD568\uC218
+#Fri Nov 10 14:15:57 KST 2023
+contains=특정 패턴의 내용이 포함되는지를 boolean으로 반환한다
+split=특정 글자를 기준으로 각 내용을 분리하여 String[]로 전환한다
+equals=다른 문자열과 비교하여 내용 일치여부를 boolean으로 반환
+replace=특정 패턴 글자를 찾아서, 새로운 내용으로 교체한다
+charAt=인덱스를 전달하여 글자를 char형태로 반환
+substring=인덱스를 지정하여 특정 범위의 문자열을 잘라낸다

@@ -18,6 +18,8 @@ public class Main {
 		while(true) {
 			System.out.println("입력 : 1");
 			System.out.println("출력 : 2");
+			System.out.println("검색 : 3");
+			System.out.println("가격 내림차순 : 4");
 			System.out.println("종료 : 0");
 			System.out.print(">>> ");
 			menu = Integer.parseInt(sc.nextLine());
@@ -39,6 +41,16 @@ public class Main {
 				
 			case 2:
 				handler.BookInfo();
+				break;
+				
+			case 3:
+				System.out.print("제목을 입력 해주세요 : ");
+				title= sc.nextLine();
+				handler.search(title);
+				break;
+				
+			case 4:
+				handler.priceSort();
 				break;
 				
 			case 0:

@@ -1,6 +1,7 @@
 package book;
 
 import accessModifier.Human;
+import student.Student;
 
 // 사용자와 상호작용
 // 입력값에 따라서 handler의 함수를 출력
@@ -33,5 +34,29 @@ public class Handler {
 			}
 		}
 	}
+	
+	public void search(String title) {
+		for(int i =0; i < arr.length; i++) {
+			if(arr[i] != null && arr[i].getTitle().equals(title) == true) {
+				System.out.printf("첵제목 : %s\n저자명 : %s\n가격 : %d\n", arr[i].getTitle(), arr[i].getAuthor(), arr[i].getPrice());
+				return;
+			}
+		}
+		System.out.println("정확히 입력해주세요");
+	}
+	
+	public void priceSort() {
+		for(int i = 0; i < arr.length; i++) {
+			for (int j = i + 1; j < arr.length; j++) {
+				if(arr[i] != null && arr[j] != null && arr[i].getPrice() < arr[j].getPrice()) {
+					Book tmp = arr[j];
+					arr[j] = arr[i];
+					arr[i] = tmp;
+				}
+			}
+		}
+		BookInfo();
+	}
+
 	
 }

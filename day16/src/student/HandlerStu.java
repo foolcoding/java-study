@@ -37,7 +37,7 @@ public class HandlerStu {
 		
 		public void search(String name) {
 			for(int i =0; i < arr.length; i++) {
-				if(arr[i] != null && rr[i]a.name.equals(name) == true) {
+				if(arr[i] != null && arr[i]a.name.equals(name) == true) {
 					System.out.printf("%s, %d, %d, %d, %d, %d\n", arr[i].name, arr[i].ban, 
 							arr[i].no, arr[i].kor, 
 							arr[i].eng, arr[i].math);
@@ -45,7 +45,6 @@ public class HandlerStu {
 				}
 			}
 			System.out.println("정확히 입력해주세요");
-			System.out.println();
 		}
 		
 		public void korSort() {
@@ -87,7 +86,7 @@ public class HandlerStu {
 			info();
 		}
 
-		public void sumSortort() {
+		public void sumSort() {
 			for(int i = 0; i < arr.length; i++) {
 				for (int j = i + 1; j < arr.length; j++) {
 					if(arr[i] != null && arr[j] != null && sum(arr[i].kor, arr[i].eng, arr[i].math)
@@ -101,7 +100,7 @@ public class HandlerStu {
 			info();
 		}
 
-		public void avgSortort() {
+		public void avgSort() {
 			for(int i = 0; i < arr.length; i++) {
 				for (int j = i + 1; j < arr.length; j++) {
 					if(arr[i] != null && arr[j] != null && sum(arr[i].kor, arr[i].eng, arr[i].math)/3

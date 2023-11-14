@@ -14,12 +14,15 @@ public class Main {
 		String author;
 		int price;
 		int row;
-		
-		while(true) {
-			System.out.println("입력 : 1");
-			System.out.println("출력 : 2");
+						
+		while(true) {	// 원하는 책 검색해서 가격 합산, 정렬기능 sort로 람다 이용해서 바꾸기
+			System.out.println("추가 : 1");
+			System.out.println("목록 : 2");
 			System.out.println("검색 : 3");
 			System.out.println("가격 내림차순 : 4");
+			System.out.println("삭제 : 5");
+			System.out.println("가격 수정 : 6");			
+			System.out.println("가격 합산 : 7");			
 			System.out.println("종료 : 0");
 			System.out.print(">>> ");
 			menu = Integer.parseInt(sc.nextLine());
@@ -45,12 +48,30 @@ public class Main {
 				
 			case 3:
 				System.out.print("제목을 입력 해주세요 : ");
-				title= sc.nextLine();
+				title = sc.nextLine();
 				handler.search(title);
 				break;
 				
 			case 4:
 				handler.priceSort();
+				break;
+				
+			case 5:
+				System.out.print("삭제할 책의 제목을 입력 해주세요 : ");
+				title = sc.nextLine();
+				handler.deleteBook(title);
+				break;
+				
+			case 6:
+				System.out.print("가격 수정할 책의 제목을 입력해주세요 : ");
+				title = sc.nextLine();
+				handler.priceChange(title, sc);
+				break;
+				
+			case 7:	
+				handler.sumBook(sc);
+				int sum = handler.priceSum();
+				System.out.println("총 금액 : " + sum);
 				break;
 				
 			case 0:
